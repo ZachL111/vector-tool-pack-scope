@@ -1,0 +1,73 @@
+{
+  "repo": "vector-tool-pack-scope",
+  "language": "Python",
+  "category": "CLI tools",
+  "goal": "Package a Python local lab for pack analysis with round-trip fixtures, lossless normalization checks, and documented operating limits.",
+  "review_model": {
+    "terms": [
+      "file span",
+      "terminal width",
+      "argument risk",
+      "report density"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "file span",
+      "signal": 53,
+      "slack": 44,
+      "drag": 22,
+      "confidence": 68,
+      "score": 152,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "terminal width",
+      "signal": 75,
+      "slack": 36,
+      "drag": 30,
+      "confidence": 88,
+      "score": 184,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "argument risk",
+      "signal": 75,
+      "slack": 25,
+      "drag": 18,
+      "confidence": 55,
+      "score": 176,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "report density",
+      "signal": 57,
+      "slack": 35,
+      "drag": 28,
+      "confidence": 60,
+      "score": 125,
+      "lane": "watch"
+    },
+    {
+      "name": "stale",
+      "focus": "file span",
+      "signal": 83,
+      "slack": 45,
+      "drag": 30,
+      "confidence": 86,
+      "score": 207,
+      "lane": "ship"
+    }
+  ]
+}
