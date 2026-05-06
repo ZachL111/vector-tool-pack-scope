@@ -1,0 +1,32 @@
+{
+  "index": 643,
+  "phase": 2,
+  "batch": 72,
+  "name": "vector-tool-pack-scope",
+  "planned_name": "vector-tool-pack-scope",
+  "language": "Python",
+  "category": "CLI tools",
+  "goal": "Package a Python local lab for pack analysis with round-trip fixtures, lossless normalization checks, and documented operating limits.",
+  "repository_url": "https://github.com/ZachL111/vector-tool-pack-scope",
+  "verification_command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/verify.ps1",
+  "model": {
+    "inputs": [
+      "demand",
+      "capacity",
+      "latency",
+      "risk",
+      "weight"
+    ],
+    "threshold": 176,
+    "risk_penalty": 7,
+    "latency_penalty": 3,
+    "weight_bonus": 3,
+    "decision_rule": "accept when score is greater than or equal to threshold, otherwise review"
+  },
+  "quality_gates": [
+    "readme constraint scan",
+    "fixture presence check",
+    "metadata JSON parse",
+    "language verifier"
+  ]
+}
