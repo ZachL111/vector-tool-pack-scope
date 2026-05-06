@@ -1,0 +1,17 @@
+{
+  "repo": "vector-tool-pack-scope",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 3,
+    "ship": 153,
+    "watch": 122
+  },
+  "terms": [
+    "file span",
+    "terminal width",
+    "argument risk",
+    "report density"
+  ]
+}
